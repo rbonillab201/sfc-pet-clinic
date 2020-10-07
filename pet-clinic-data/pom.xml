@@ -4,11 +4,11 @@
 	<parent>
 		<groupId>net.cuscatlan</groupId>
 		<artifactId>sfc-pet-clinic</artifactId>
-		<version>0.0.6</version>
+		<version>0.0.7-SNAPSHOT</version>
 	</parent>
 	<groupId>net.cuscatlan</groupId>
 	<artifactId>pet-clinic-data</artifactId>
-	<version>0.0.6</version>
+	<version>0.0.7-SNAPSHOT</version>
 	<name>pet-clinic-data</name>
 	<properties>
 			<java.version>11</java.version>
