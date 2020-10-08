@@ -1,7 +1,5 @@
 package net.cuscatlan.sfcpetclinic.service;
 
-import java.util.Set;
-
 import net.cuscatlan.sfcpetclinic.model.Vet;
 
 /**
@@ -9,10 +7,6 @@ import net.cuscatlan.sfcpetclinic.model.Vet;
  *
  */
 
-public interface VetService {
-	
-	Vet findById(Long id);
-	Set<Vet> findAll();
-	Vet save(Vet vet);
+public interface VetService extends CrudService<Vet, Long> {
 
 }
