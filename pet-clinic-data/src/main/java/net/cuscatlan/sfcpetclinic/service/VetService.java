@@ -1,5 +1,7 @@
 package net.cuscatlan.sfcpetclinic.service;
 
+import org.springframework.stereotype.Service;
+
 import net.cuscatlan.sfcpetclinic.model.Vet;
 
 /**

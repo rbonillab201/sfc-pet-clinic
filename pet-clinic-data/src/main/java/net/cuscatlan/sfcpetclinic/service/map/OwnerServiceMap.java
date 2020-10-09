@@ -2,9 +2,12 @@ package net.cuscatlan.sfcpetclinic.service.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import net.cuscatlan.sfcpetclinic.model.Owner;
 import net.cuscatlan.sfcpetclinic.service.CrudService;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
 
 	@Override

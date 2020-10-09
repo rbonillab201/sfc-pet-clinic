@@ -2,9 +2,12 @@ package net.cuscatlan.sfcpetclinic.service.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import net.cuscatlan.sfcpetclinic.model.Pet;
 import net.cuscatlan.sfcpetclinic.service.CrudService;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long>{
 
 	@Override

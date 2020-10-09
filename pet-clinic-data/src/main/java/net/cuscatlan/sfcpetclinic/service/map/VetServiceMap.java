@@ -2,6 +2,8 @@ package net.cuscatlan.sfcpetclinic.service.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import net.cuscatlan.sfcpetclinic.model.Vet;
 import net.cuscatlan.sfcpetclinic.service.CrudService;
 
@@ -10,7 +12,8 @@ import net.cuscatlan.sfcpetclinic.service.CrudService;
  *
  */
 
-public class VetService extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+@Service
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
 
 	@Override
 	public Set<Vet> findAll() {
