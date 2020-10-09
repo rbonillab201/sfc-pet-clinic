@@ -13,7 +13,7 @@ public class VetsController {
 	@GetMapping({"","/","/index", "/index.html"})
 	public String findAll(Model model) {
 		model.addAttribute("title", "Vets List");
-//		model.addAttribute("vets", vetService.findAll());
+
 		return "vets/list";	
 	}
 
