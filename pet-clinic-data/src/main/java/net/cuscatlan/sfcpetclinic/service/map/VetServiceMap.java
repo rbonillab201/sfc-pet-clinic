@@ -5,7 +5,7 @@ import java.util.Set;
 import org.springframework.stereotype.Service;
 
 import net.cuscatlan.sfcpetclinic.model.Vet;
-import net.cuscatlan.sfcpetclinic.service.CrudService;
+import net.cuscatlan.sfcpetclinic.service.VetService;
 
 /**
  * @author Renato Oswaldo Bonilla (rBonilla) el día Oct 8, 2020
@@ -13,7 +13,7 @@ import net.cuscatlan.sfcpetclinic.service.CrudService;
  */
 
 @Service
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
 	@Override
 	public Set<Vet> findAll() {

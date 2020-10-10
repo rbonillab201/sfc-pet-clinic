@@ -5,10 +5,10 @@ import java.util.Set;
 import org.springframework.stereotype.Service;
 
 import net.cuscatlan.sfcpetclinic.model.Owner;
-import net.cuscatlan.sfcpetclinic.service.CrudService;
+import net.cuscatlan.sfcpetclinic.service.OwnerService;
 
 @Service
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
 	@Override
 	public Set<Owner> findAll() {
@@ -33,6 +33,12 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 	@Override
 	public void deleteById(Long id) {
 		super.deleteById(id);		
+	}
+
+	@Override
+	public Owner findByLastName(String lastName) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 
