@@ -31,14 +31,12 @@ public class LoadData implements CommandLineRunner {
 		// TODO Auto-generated method stub
 		
 		Owner owner1 = new Owner();
-		owner1.setId(1L);
 		owner1.setFirstName("Renato");
 		owner1.setLastName("Bonilla");
 		
 		ownerService.save(owner1);
 		
 		Owner owner2 = new Owner();
-		owner2.setId(2L);
 		owner2.setFirstName("Piero");
 		owner2.setLastName("Bonilla");
 		
@@ -47,14 +45,12 @@ public class LoadData implements CommandLineRunner {
 		System.out.println("Owner Loaded");
 		
 		Vet vet1 = new Vet();
-		vet1.setId(1L);
 		vet1.setFirstName("Gaby");
 		vet1.setLastName("Bonilla");
 
 		vetService.save(vet1);
 		
 		Vet vet2 = new Vet();
-		vet2.setId(2L);
 		vet2.setFirstName("Karla");
 		vet2.setLastName("Bonilla");
 		
