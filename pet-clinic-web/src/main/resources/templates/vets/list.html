@@ -15,10 +15,10 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr th:each="item: ${vets}">
-				<td th:tex="${item.id}"></td>
-				<td th:tex="${item.id}"></td>
-				<td th:tex="${item.id}"></td>			
+			<tr th:each=" item : ${vets}">
+				<td th:text="${item.id}"></td>
+				<td th:text="${item.firstName}"></td>
+				<td th:text="${item.lastName}"></td>			
 			</tr>
 		</tbody>
 	</table>
