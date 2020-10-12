@@ -5,6 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import net.cuscatlan.sfcpetclinic.service.OwnerService;
+
 /**
  * @author Renato Oswaldo Bonilla (rBonilla) el día Oct 9, 2020
  *
@@ -13,9 +15,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping({"/owners"})
 public class OwnersController {
 	
+	private final OwnerService ownerService;
+	
+	public OwnersController(OwnerService ownerService) {
+		this.ownerService = ownerService;
+	}
+
 	@GetMapping({"","/","/index","index.html"})
 	public String listar(Model model) {
 		model.addAttribute("title", "Owners List");
+		model.addAttribute("owners", ownerService.findAll());
 		return "owners/list";
 	}
 

@@ -19,12 +19,10 @@ public class LoadData implements CommandLineRunner {
 	
 	public final OwnerService ownerService;
 	public final VetService vetService;
-	
-	
 
 	public LoadData(OwnerService ownerService, VetService vetService) {
-		this.ownerService = new OwnerServiceMap();
-		this.vetService = new VetServiceMap();
+		this.ownerService = ownerService;
+		this.vetService = vetService;
 	}
 
 
@@ -52,7 +50,7 @@ public class LoadData implements CommandLineRunner {
 		vet1.setId(1L);
 		vet1.setFirstName("Gaby");
 		vet1.setLastName("Bonilla");
-		
+
 		vetService.save(vet1);
 		
 		Vet vet2 = new Vet();
