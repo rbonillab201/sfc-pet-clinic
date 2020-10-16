@@ -12,7 +12,7 @@ import net.cuscatlan.sfcpetclinic.service.OwnerService;
  *
  */
 @Controller
-@RequestMapping({"/owners"})
+//@RequestMapping({"/owners"})
 public class OwnersController {
 	
 	private final OwnerService ownerService;
@@ -21,7 +21,7 @@ public class OwnersController {
 		this.ownerService = ownerService;
 	}
 
-	@GetMapping({"","/","/index","index.html"})
+	@GetMapping({"","/","/owners","/owners.html"})
 	public String listar(Model model) {
 		model.addAttribute("title", "Owners List");
 		model.addAttribute("owners", ownerService.findAll());

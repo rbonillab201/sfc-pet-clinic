@@ -9,7 +9,7 @@ import net.cuscatlan.sfcpetclinic.service.VetService;
 
 
 @Controller
-@RequestMapping("/vets")
+//@RequestMapping("/vets")
 public class VetsController {
 	
 	private final VetService vetService;	
@@ -18,7 +18,7 @@ public class VetsController {
 		this.vetService = vetService;
 	}
 
-	@GetMapping({"","/","/index", "/index.html"})
+	@GetMapping({"","/", "/vets", "/vets.html"})
 	public String findAll(Model model) {
 		model.addAttribute("title", "Vets List");
 		model.addAttribute("vets", vetService.findAll());
