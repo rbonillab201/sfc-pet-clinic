@@ -18,10 +18,11 @@ public class VetsController {
 		this.vetService = vetService;
 	}
 
-	@GetMapping({"","/", "/vets", "/vets.html"})
+	@GetMapping({"/vets", "/vets.html"})
 	public String findAll(Model model) {
 		model.addAttribute("title", "Vets List");
 		model.addAttribute("vets", vetService.findAll());
+		System.out.println("vets -> " + vetService.findAll() );
 		return "vets/list";	
 	}
 

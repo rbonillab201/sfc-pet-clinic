@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  */
 @Controller 
-@RequestMapping({"", "/"})
+@RequestMapping({""})
 public class IndexController {
 	
-	@GetMapping({"", "/", "index", "index.html"})
+	@GetMapping({"/index", "/index.html"})
 	String index(Model model) {
 		model.addAttribute("title", "Index Page");
 		return "index";

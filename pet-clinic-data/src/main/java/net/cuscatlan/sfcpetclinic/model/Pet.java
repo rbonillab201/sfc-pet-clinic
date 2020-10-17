@@ -11,14 +11,14 @@ import lombok.EqualsAndHashCode;
  */
 
 @Data
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode(callSuper = true)
 public class Pet extends BaseEntity {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+	private String petName;
 	private PetType petType;
 	private Owner owner;
 	private LocalDate birthDate;

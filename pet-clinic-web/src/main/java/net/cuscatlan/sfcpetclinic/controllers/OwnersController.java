@@ -21,10 +21,11 @@ public class OwnersController {
 		this.ownerService = ownerService;
 	}
 
-	@GetMapping({"","/","/owners","/owners.html"})
+	@GetMapping({"/owners","owners.html"})
 	public String listar(Model model) {
 		model.addAttribute("title", "Owners List");
 		model.addAttribute("owners", ownerService.findAll());
+		System.out.println("owners -> " + ownerService.findAll());
 		return "owners/list";
 	}
 

@@ -42,6 +42,12 @@ public class LoadData implements CommandLineRunner {
 		
 		ownerService.save(owner2);
 		
+		Owner owner3 = new Owner();
+		owner3.setFirstName("Tito");
+		owner3.setLastName("Bonilla");
+		
+		ownerService.save(owner3);		
+		
 		System.out.println("Owner Loaded");
 		
 		Vet vet1 = new Vet();

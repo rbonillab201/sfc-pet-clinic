@@ -11,7 +11,7 @@ import lombok.EqualsAndHashCode;
  */
 
 @Data
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode(callSuper = true)
 public class Visit extends BaseEntity {
 	
 	/**
