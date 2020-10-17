@@ -1,23 +1,26 @@
 package net.cuscatlan.sfcpetclinic.model;
 
-import java.util.Set;
+import java.time.LocalDate;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
- * @author Renato Oswaldo Bonilla (rBonilla) el día Oct 5, 2020
+ * @author Renato Oswaldo Bonilla (rBonilla) el día Oct 16, 2020
  *
  */
 
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class Owner extends Person {
-
+public class Visit extends BaseEntity {
+	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private Set<Pet> pets;
+	private LocalDate date;
+	private String description;
+	private Pet pet;
 
+ 
 }
