@@ -2,6 +2,8 @@ package net.cuscatlan.sfcpetclinic.service.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import net.cuscatlan.sfcpetclinic.model.PetType;
 import net.cuscatlan.sfcpetclinic.service.PetTypeService;
 
@@ -9,7 +11,7 @@ import net.cuscatlan.sfcpetclinic.service.PetTypeService;
  * @author Renato Oswaldo Bonilla (rBonilla) el día Oct 17, 2020
  *
  */
-
+@Service
 public class PetTypeServiceMap extends AbstractMapService<PetType, Long> implements PetTypeService {
 
 	@Override

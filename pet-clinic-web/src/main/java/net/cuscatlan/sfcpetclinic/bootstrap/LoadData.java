@@ -4,8 +4,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import net.cuscatlan.sfcpetclinic.model.Owner;
+import net.cuscatlan.sfcpetclinic.model.PetType;
 import net.cuscatlan.sfcpetclinic.model.Vet;
 import net.cuscatlan.sfcpetclinic.service.OwnerService;
+import net.cuscatlan.sfcpetclinic.service.PetTypeService;
 import net.cuscatlan.sfcpetclinic.service.VetService;
 import net.cuscatlan.sfcpetclinic.service.map.OwnerServiceMap;
 import net.cuscatlan.sfcpetclinic.service.map.VetServiceMap;
@@ -19,8 +21,10 @@ public class LoadData implements CommandLineRunner {
 	
 	public final OwnerService ownerService;
 	public final VetService vetService;
+	public final PetTypeService petTypeService;
 
-	public LoadData(OwnerService ownerService, VetService vetService) {
+	public LoadData(OwnerService ownerService, VetService vetService, PetTypeService petTypeService) {
+		this.petTypeService = petTypeService;
 		this.ownerService = ownerService;
 		this.vetService = vetService;
 	}
@@ -29,6 +33,16 @@ public class LoadData implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
+		
+		PetType dog = new PetType();
+		dog.setName("Dog");
+		PetType dogSaved = petTypeService.save(dog);
+		
+		PetType cat = new PetType();
+		cat.setName("Cat");
+		PetType catSaved = petTypeService.save(cat);
+		
+		System.out.println("PetTypes saved");
 		
 		Owner owner1 = new Owner();
 		owner1.setFirstName("Renato");
