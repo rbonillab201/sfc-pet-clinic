@@ -18,5 +18,11 @@ public class IndexController {
 		model.addAttribute("title", "Index Page");
 		return "index";
 	}
+	
+	@GetMapping("/oups")
+	String oups(Model model) {
+		model.addAttribute("pag", "error");
+		return "noimplemented";
+	}
 
 }

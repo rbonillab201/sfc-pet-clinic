@@ -28,5 +28,11 @@ public class OwnersController {
 		System.out.println("owners -> " + ownerService.findAll());
 		return "owners/list";
 	}
+	
+	@GetMapping("/owners/find")
+	public String find(Model model) {
+		model.addAttribute("pag", "owners");
+		return "noimplemented";
+	}
 
 }
