@@ -1,21 +1,28 @@
 package net.cuscatlan.sfcpetclinic.model;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author Renato Oswaldo Bonilla (rBonilla) el día Oct 17, 2020
  *
  */
 
-@Data
-@EqualsAndHashCode(callSuper = true)
+@Setter
+@Getter
+@Table(name = "specialties")
+@Entity
 public class Specialty extends BaseEntity {
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	@Column(name = "description")
 	private String description;
 
 }
