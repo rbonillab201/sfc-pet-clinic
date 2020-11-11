@@ -11,14 +11,16 @@ import javax.persistence.Table;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author Renato Oswaldo Bonilla (rBonilla) el día Oct 5, 2020
  *
  */
 
-@Data
-@EqualsAndHashCode(callSuper = true)
+@Setter
+@Getter
 @Table(name = "owners")
 @Entity
 public class Owner extends Person {

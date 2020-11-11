@@ -16,7 +16,7 @@ import net.cuscatlan.sfcpetclinic.service.SpecialtyService;
  */
 
 @Service
-@Profile("sptingJpa")
+@Profile("springJpa")
 public class SpecialtyServiceJpa implements SpecialtyService {
 
 	public final SpecialtyRepository specialtyRepository;

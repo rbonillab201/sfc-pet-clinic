@@ -6,10 +6,12 @@ import javax.persistence.Table;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-@EqualsAndHashCode(callSuper = true)
 
+@Setter
+@Getter
 @Table(name = "types")
 @Entity
 public class PetType extends BaseEntity {
