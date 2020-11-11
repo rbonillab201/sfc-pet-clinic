@@ -10,13 +10,13 @@ import net.cuscatlan.sfcpetclinic.model.Pet;
 import net.cuscatlan.sfcpetclinic.model.PetType;
 import net.cuscatlan.sfcpetclinic.model.Specialty;
 import net.cuscatlan.sfcpetclinic.model.Vet;
+import net.cuscatlan.sfcpetclinic.model.Visit;
 import net.cuscatlan.sfcpetclinic.service.OwnerService;
-import net.cuscatlan.sfcpetclinic.service.PetService;
 import net.cuscatlan.sfcpetclinic.service.PetTypeService;
 import net.cuscatlan.sfcpetclinic.service.SpecialtyService;
 import net.cuscatlan.sfcpetclinic.service.VetService;
-import net.cuscatlan.sfcpetclinic.service.map.OwnerServiceMap;
-import net.cuscatlan.sfcpetclinic.service.map.VetServiceMap;
+import net.cuscatlan.sfcpetclinic.service.VisitService;
+
 
 /**
  * @author Renato Oswaldo Bonilla (rBonilla) el día Oct 10, 2020
@@ -29,12 +29,15 @@ public class LoadData implements CommandLineRunner {
 	public final VetService vetService;
 	public final PetTypeService petTypeService;
 	public final SpecialtyService specialtyService;
+	public final VisitService visitService;
 
-	public LoadData(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService) {
+	public LoadData(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, 
+			SpecialtyService specialtyService, VisitService visitService) {
 		this.specialtyService = specialtyService;
 		this.petTypeService = petTypeService;
 		this.ownerService = ownerService;
 		this.vetService = vetService;
+		this.visitService = visitService;
 	}
 
 
@@ -123,6 +126,32 @@ public class LoadData implements CommandLineRunner {
 		ownerService.save(owner3);		
 		
 		System.out.println("Owner Loaded");
+
+		
+		Visit visitDog1 = new Visit();
+		visitDog1.setDescription("Bobby");
+		visitDog1.setPet(renatoDog);
+		visitDog1.setVisitDate(LocalDate.now());
+		
+		visitService.save(visitDog1);	
+		
+		
+		Visit visitDog2 = new Visit();
+		visitDog2.setDescription("Frechy");
+		visitDog2.setPet(pieroDog);
+		visitDog2.setVisitDate(LocalDate.now());
+		
+		visitService.save(visitDog2);
+		
+		
+		Visit visitCat1 = new Visit();
+		visitCat1.setDescription("Gatito");
+		visitCat1.setPet(titoCat);
+		visitCat1.setVisitDate(LocalDate.now());
+		
+		visitService.save(visitCat1);
+		
+		System.out.println("Visits Loaded");
 		
 		Vet vet1 = new Vet();
 		vet1.setFirstName("Gaby");
