@@ -14,16 +14,14 @@ import javax.persistence.Table;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.ToString;
 
 /**
  * @author Renato Oswaldo Bonilla (rBonilla) el día Oct 5, 2020
  *
  */
-
-@Setter
-@Getter
+@EqualsAndHashCode(exclude = {"owner"})
+@Data
 @Table(name = "pets")
 @Entity
 public class Pet extends BaseEntity {
@@ -37,6 +35,7 @@ public class Pet extends BaseEntity {
 	@ManyToOne
 	@JoinColumn(name = "type_id")
 	private PetType petType;
+	@ToString.Exclude
 	@ManyToOne
 	@JoinColumn(name = "owner_id")
 	private Owner owner;

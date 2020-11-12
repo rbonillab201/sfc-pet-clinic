@@ -9,16 +9,14 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 /**
  * @author Renato Oswaldo Bonilla (rBonilla) el día Oct 5, 2020
  *
  */
 
-@Setter
-@Getter
+@Data
 @Table(name = "vets")
 @Entity
 public class Vet extends Person {

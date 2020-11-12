@@ -4,18 +4,15 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
+
 
 /**
  * @author Renato Oswaldo Bonilla (rBonilla) el día Oct 17, 2020
  *
  */
 
-@Setter
-@Getter
+@Data
 @Table(name = "specialties")
 @Entity
 public class Specialty extends BaseEntity {
